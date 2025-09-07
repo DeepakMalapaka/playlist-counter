@@ -6,6 +6,7 @@ import EnterInput from "./components/EnterInput";
 import Stats from "./components/Stats";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import Footer from "./components/Footer";
 function App() {
   const [isDark, setIsDark] = useState(true);
   const [playListName, setPlayListName] = useState();
@@ -73,6 +74,7 @@ function App() {
 
           <EnterInput />
           <Stats />
+          <Footer/>
         </div>
       </ThemeContext.Provider>
     </StatsContext.Provider>
