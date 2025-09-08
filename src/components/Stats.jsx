@@ -56,7 +56,7 @@ const Stats = () => {
         <div className="flex flex-col justify-center items-center border-2 border-gray-700 rounded-2xl p-3 w-full sm:w-60 h-32">
           <span className="font-bold text-base sm:text-xl">Total Duration</span>
           <span className="font-bold text-lg sm:text-xl">
-            {totalDuration ? FormatDuration(totalDuration) : "Loading ..."}
+            {totalDuration ? FormatDuration(totalDuration) : "0m"}
           </span>
         </div>
         <div className="flex flex-col justify-center items-center border-2 border-gray-700 rounded-2xl p-3 w-full sm:w-60 h-32">
@@ -64,7 +64,7 @@ const Stats = () => {
           <span className="font-bold text-lg sm:text-xl">
             {averageLength
               ? FormatDuration(totalDuration / totalVideos)
-              : "Loading ..."}
+              : "0m"}
           </span>
         </div>
       </div>
@@ -86,7 +86,7 @@ const Stats = () => {
           <span className="font-bold text-xl sm:text-2xl">
             {totalDuration
               ? FormatDuration(totalDuration / 1.25)
-              : "Loading ..."}
+              : "0m"}
           </span>
         </div>
         <div
@@ -98,7 +98,7 @@ const Stats = () => {
           <span className="font-bold text-xl sm:text-2xl">
             {totalDuration
               ? FormatDuration(totalDuration / 1.5)
-              : "Loading ..."}
+              : "0m"}
           </span>
         </div>
         <div
@@ -110,7 +110,7 @@ const Stats = () => {
           <span className="font-bold text-xl sm:text-2xl">
             {totalDuration
               ? FormatDuration(totalDuration / 2.0)
-              : "Loading ..."}
+              : "0m"}
           </span>
         </div>
       </div>
