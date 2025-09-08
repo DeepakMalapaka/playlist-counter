@@ -34,8 +34,8 @@ const Stats = () => {
           <span>🕵🏻 PlayList Details</span>
         </div>
         <div className="specs flex flex-col justify-center items-start font-semibold text-sm sm:text-base mb-5">
-          <span>PlayList Name: {playListName || "Loading ..."}</span>
-          <span>Content Creator: {contentCreator || "Loading ..."}</span>
+          <span>PlayList Name: {playListName || "..."}</span>
+          <span>Content Creator: {contentCreator || "..."}</span>
         </div>
       </div>
 
