@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 
 function FetchPlayList() {
   // Parse ISO-8601 duration like PT1H2M3S (days supported)
+  const apiKey = import.meta.env.VITE_API_KEY;
   function parseDuration(duration) {
     if (!duration) return 0;
     const regex = /P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/;
@@ -54,7 +55,7 @@ function FetchPlayList() {
             part: "contentDetails",
             maxResults: 50,
             playlistId,
-            key: import.meta.env.VITE_API_KEY,
+            key: apiKey,
             ...(nextPageToken ? { pageToken: nextPageToken } : {}),
           },
         }
@@ -82,7 +83,7 @@ function FetchPlayList() {
       // 1) Fetch metadata (name/creator)
       const meta = await axios.get(
         "https://www.googleapis.com/youtube/v3/playlists",
-        { params: { part: "snippet", id: playListId, key: import.meta.env.VITE_API_KEY } }
+        { params: { part: "snippet", id: playListId, key: apiKey } }
       );
       const metaItem = meta.data?.items?.[0];
       if (metaItem) {
@@ -118,7 +119,7 @@ function FetchPlayList() {
         const chunk = selectedVideoIds.slice(i, i + 50).join(",");
         const { data } = await axios.get(
           "https://www.googleapis.com/youtube/v3/videos",
-          { params: { part: "contentDetails", id: chunk, key: import.meta.env.VITE_API_KEY } }
+          { params: { part: "contentDetails", id: chunk, key: apiKey } }
         );
 
         for (const v of data.items || []) {
