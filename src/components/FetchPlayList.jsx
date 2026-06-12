@@ -75,7 +75,7 @@ function FetchPlayList() {
   const handleFetch = async () => {
     const playListId = getPlayListId(playListURL);
     if (!playListId) {
-      toast.error("Invalid playlist URL ❌");
+      toast.error("Invalid playlist URL ");
       return;
     }
 
@@ -94,7 +94,7 @@ function FetchPlayList() {
       // 2) Fetch all video IDs
       const allVideoIds = await fetchAllVideoIds(playListId);
       if (allVideoIds.length === 0) {
-        toast.error("No public videos found in this playlist ❌");
+        toast.error("No public videos found in this playlist ");
         return;
       }
 
@@ -105,7 +105,7 @@ function FetchPlayList() {
       const endIndex = e - 1;
 
       if (startIndex > endIndex) {
-        toast.error("Invalid range ❌ (start must be ≤ end)");
+        toast.error("Invalid range --> (start must be ≤ end)");
         return;
       }
 
@@ -134,16 +134,16 @@ function FetchPlayList() {
       setTotalDuration(totalSeconds);
       setAverageLength(avgSeconds);
 
-      toast.success("Playlist range calculated successfully! 😊");
+      toast.success("Playlist range calculated successfully!");
     } catch (error) {
       const apiMessage =
         error?.response?.data?.error?.message || error?.message || "Unknown error";
       console.error("handleFetch error:", apiMessage, error?.response?.data);
       // Give a friendlier message for common cases
       if (/quota/i.test(apiMessage)) {
-        toast.error("YouTube API quota exceeded. Try again later. ⏳");
+        toast.error("YouTube API quota exceeded. Try again later. ");
       } else if (/API key/i.test(apiMessage) || /permission/i.test(apiMessage)) {
-        toast.error("API key error. Check your YouTube Data API key/config. 🔑");
+        toast.error("API key error. Check your YouTube Data API key/config.");
       } else if (/pageToken/i.test(apiMessage)) {
         toast.error("Page token error. Please try again. 🔁");
       } else {

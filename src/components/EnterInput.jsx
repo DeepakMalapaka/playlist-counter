@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import ThemeContext from "../context/ThemeContext";
 import FormContext from "../context/FormContext";
 import FetchPlayList from "./FetchPlayList";
+import Link from "../assets/Link.svg"
 
 const EnterInput = () => {
   const { isDark } = useContext(ThemeContext);
@@ -22,8 +23,9 @@ const EnterInput = () => {
             : "bg-[#f6f8fa]/70 border-gray-300 text-[#24292f]"
         }`}
       >
-        <h2 className="text-base sm:text-lg font-semibold mb-4">
-          Enter YouTube playlist URL 🔗
+        <h2 className="text-base sm:text-lg font-semibold mb-4 flex items-center gap-2">
+          Enter YouTube playlist URL
+          <img src={Link} alt="" className="size-8"/>
         </h2>
         <form
           onSubmit={(e) => {

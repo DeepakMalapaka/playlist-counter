@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
 import StatsContext from "../context/StatsContext";
+import search from "../assets/search.svg"
+import calculator from "../assets/calculator.svg"
+import fast from "../assets/fast-forward.svg"
 const Stats = () => {
   const { isDark } = useContext(ThemeContext);
   const {
@@ -30,8 +33,9 @@ const Stats = () => {
     >
       {/* Header */}
       <div className="m-2">
-        <div className="details text-center text-lg sm:text-xl font-bold mb-2">
-          <span>🕵🏻 PlayList Details</span>
+        <div className="details text-center text-lg sm:text-xl font-bold mb-2 flex justify-center gap-2">
+          <img src={search} alt="search" className="size-7"/>
+          <span>PlayList Details</span>
         </div>
         <div className="specs flex flex-col justify-center items-start font-semibold text-sm sm:text-base mb-5">
           <span>PlayList Name: {playListName || "..."}</span>
@@ -43,8 +47,9 @@ const Stats = () => {
       <div className="w-full h-[2px] bg-gray-600 my-4"></div>
 
       {/* Stats */}
-      <div className="heading text-center text-lg sm:text-xl font-bold">
-        📊 PlayList-Statistics
+      <div className="heading text-center text-lg sm:text-xl font-bold flex justify-center gap-2">
+        <img src={calculator} alt="stats" className="size-7"/>
+        PlayList Statistics
       </div>
       <div className="lengthShow w-full flex flex-col sm:flex-row justify-center items-center gap-6 mt-5 mb-5">
         <div className="flex flex-col justify-center items-center border-2 border-gray-700 rounded-2xl p-3 w-full sm:w-60 h-32">
@@ -73,8 +78,9 @@ const Stats = () => {
       <div className="w-full h-[2px] bg-gray-600 my-4"></div>
 
       {/* Playback Speed */}
-      <div className="heading text-center text-lg sm:text-xl font-bold">
-        ⚡ PlayBack Speed Options
+      <div className="heading text-center text-lg sm:text-xl font-bold flex justify-center gap-2">
+        <img src={fast} alt="fast" className="size-7"/>
+        Speed Options
       </div>
       <div className="lengthShow w-full flex flex-col sm:flex-row justify-center items-center gap-6 mt-5 mb-5">
         <div

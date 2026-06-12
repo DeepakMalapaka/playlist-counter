@@ -10,7 +10,7 @@ const Footer = () => {
           : "bg-[#f6f8fa]/70 text-[#24292f]"
       } py-4 mt-10`}
     >
-      <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
+      <div className="backdrop-blur-md container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
         {/* Left Side */}
         <p className="text-sm mb-2 sm:mb-0">
           © {new Date().getFullYear()} PlayList-Counter. All rights reserved.

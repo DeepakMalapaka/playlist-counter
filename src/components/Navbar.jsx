@@ -1,10 +1,20 @@
-import React, { useContext } from "react";
+import React, { useState,useEffect,useContext } from "react";
 import ToggleButton from "./ToggleButton";
 import play from "../assets/play.svg";
+import like from "../assets/like.svg"
 import ThemeContext from "../context/ThemeContext";
 
 const Navbar = () => {
   const { isDark } = useContext(ThemeContext);
+  const [showPlay, setShowPlay] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowPlay((prev) => !prev);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div
@@ -13,16 +23,20 @@ const Navbar = () => {
                   backdrop-blur-md border-b transition-colors ease-in-out rounded-2xl max-w-screen-lg mx-auto
                   ${
                     isDark
-                      ? // 🌙 GitHub dark theme navbar
+                      ? // GitHub dark theme navbar
                         "bg-[#161b22]/80 text-[#c9d1d9] border-gray-700"
-                      : // ☀️ Softer light theme navbar
+                      : // Softer light theme navbar
                         "bg-[#f6f8fa]/80 text-[#24292f] border-gray-300"
                   }`}
     >
       {/* Logo & Name */}
       <div className="flex justify-center items-center gap-2">
         <span>
-          <img src={play} alt="play" className="size-10" />
+          <img
+        src={showPlay ? play : like}
+        alt="icon"
+        className="size-10 transition-all duration-500"
+      />
         </span>
         <span>
           <h1 className="font-bold text-2xl ">PlayList-Counter</h1>
