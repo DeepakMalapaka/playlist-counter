@@ -9,8 +9,8 @@ const Navbar = () => {
   return (
     <div
       className={`flex justify-between items-center max-w-full h-20 px-10 py-4 
-                  fixed top-0 left-0 right-0 z-50 
-                  backdrop-blur-md border-b transition-colors ease-in-out 
+                  fixed top-2 left-0 right-0 z-20
+                  backdrop-blur-md border-b transition-colors ease-in-out rounded-2xl max-w-screen-lg mx-auto
                   ${
                     isDark
                       ? // 🌙 GitHub dark theme navbar
@@ -25,7 +25,7 @@ const Navbar = () => {
           <img src={play} alt="play" className="size-10" />
         </span>
         <span>
-          <h1 className="font-bold text-2xl">PlayList-Counter</h1>
+          <h1 className="font-bold text-2xl ">PlayList-Counter</h1>
         </span>
       </div>
 

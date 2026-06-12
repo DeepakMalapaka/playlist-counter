@@ -71,8 +71,7 @@ function App() {
               and hassle-free.
             </p>
           </div>
-            console.log('Running');
-            
+            {/* console.log('Running'); */}
           <EnterInput />
           <Stats />
           <Footer/>
