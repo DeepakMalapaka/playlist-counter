@@ -1,20 +1,10 @@
-import React, { useState,useEffect,useContext } from "react";
+import React, { useContext } from "react";
 import ToggleButton from "./ToggleButton";
 import play from "../assets/play.svg";
-import like from "../assets/like.svg"
 import ThemeContext from "../context/ThemeContext";
 
 const Navbar = () => {
   const { isDark } = useContext(ThemeContext);
-  const [showPlay, setShowPlay] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowPlay((prev) => !prev);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div
@@ -33,7 +23,7 @@ const Navbar = () => {
       <div className="flex justify-center items-center gap-2">
         <span>
           <img
-        src={showPlay ? play : like}
+        src={play}
         alt="icon"
         className="size-10 transition-all duration-500"
       />
