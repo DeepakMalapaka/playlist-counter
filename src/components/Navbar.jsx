@@ -10,7 +10,7 @@ const Navbar = () => {
     <div
       className={`flex justify-between items-center h-20 px-10 py-4 
                   fixed top-2 left-0 right-0 z-20
-                  backdrop-blur-md border-b transition-colors ease-in-out rounded-2xl max-w-screen-lg mx-auto
+                  backdrop-blur-md border-t border-b transition-colors ease-in-out rounded-full max-w-screen-lg mx-auto
                   ${
                     isDark
                       ? // GitHub dark theme navbar
