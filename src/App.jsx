@@ -46,7 +46,7 @@ function App() {
           theme="dark" // "light", "dark", or "colored"
         />
         <div
-          className={`min-h-screen transition-colors ease-in-out flex flex-col items-center px-4 pt-28 selection:bg-red-900/30 selection:text-red-500 ${
+          className={`min-h-screen transition-colors ease-in-out flex flex-col items-center px-4 pt-28 selection:bg-red-700/40  ${
             isDark
               ? "bg-gradient-to-br from-[#0d1117] via-[#161b22] to-[#0d1117] text-[#c9d1d9]"
               : "bg-gradient-to-br from-[#f6f8fa] via-[#ffffff] to-[#eaeef2] text-[#24292f]"
