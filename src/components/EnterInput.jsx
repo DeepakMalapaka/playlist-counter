@@ -25,7 +25,7 @@ const EnterInput = () => {
       >
         <h2 className="text-base sm:text-lg font-semibold mb-4 flex items-center gap-2">
           Enter YouTube playlist URL
-          <img src={Link} alt="" className="size-8"/>
+          <img src={Link} alt="" className="size-6"/>
         </h2>
         <form
           onSubmit={(e) => {
