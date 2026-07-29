@@ -37,9 +37,9 @@ const Stats = () => {
           <img src={search} alt="search" className="size-7"/>
           <span>PlayList Details</span>
         </div>
-        <div className="specs flex flex-col justify-center items-start font-semibold text-sm sm:text-base mb-5">
-          <span>PlayList Name: {playListName || "..."}</span>
-          <span>Content Creator: {contentCreator || "..."}</span>
+        <div className="specs flex flex-col justify-center items-start font-semibold text-sm sm:text-base mb-5 mt-5">
+          <span>PlayList Name : {playListName || ""}</span>
+          <span>Content Creator : {contentCreator || ""}</span>
         </div>
       </div>
 

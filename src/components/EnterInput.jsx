@@ -38,7 +38,7 @@ const EnterInput = () => {
           {/* Playlist URL */}
           <input
             type="url"
-            placeholder="Paste your playlist link here..."
+            placeholder="Paste your playlist link here ..."
             className={`w-full p-3 rounded-xl text-sm sm:text-base 
             shadow-inner border focus:outline-none focus:ring-2 
             transition-all duration-300
