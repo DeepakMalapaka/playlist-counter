@@ -46,4 +46,4 @@ Fast ⚡, clean 🎨, and hassle-free ✅.
 This project is licensed under the MIT License.
 
 👨‍💻 Author
-Built with ❤️ by Deepak Malapaka
+Built by Deepak Malapaka
