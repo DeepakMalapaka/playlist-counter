@@ -26,6 +26,15 @@ const Footer = () => {
             className="text-red-500 hover:underline font-semibold"
           >
             Deepak Malapaka
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://github.com/vasanthimunduri"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-red-500 hover:underline font-semibold"
+          >
+            Vasanthi Munduri
           </a>
         </p>
       </div>
